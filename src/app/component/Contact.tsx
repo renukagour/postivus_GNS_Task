@@ -1,7 +1,7 @@
-// components/ContactUs.tsx
+"use client"
 import React from 'react';
-// import contact from "../../../public/contact.png"
-// import Image from 'next/image';
+import contact from "../../../public/contact.png"
+import Image from 'next/image';
 const Contact = () => {
   return (
     <section className="py-12">
@@ -14,7 +14,7 @@ const Contact = () => {
           <div className="flex space-x-4">
             <label className="flex items-center">
               <input type="radio" name="contactType" value="help" className="form-radio text-green-600" />
-              <span className="ml-2 text-gray-700">Help</span>
+              <span className="ml-2 text-gray-700">Say Hi</span>
             </label>
             <label className="flex items-center">
               <input type="radio" name="contactType" value="quote" className="form-radio text-green-600" />
@@ -28,7 +28,14 @@ const Contact = () => {
         </form>
       </div>
       <div>
-      <img src="../../../public/contact.png" alt='contact'/>
+    
+      <Image
+                src={contact}
+                alt="SEO illustration"
+                width={300}
+                height={300}
+           
+              />
       </div>
       </div>
     </section>
