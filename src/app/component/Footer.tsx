@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
       </div>
 <div></div>
       {/* Bottom Section - Copyright */}
-      <div className="text-center mt-10 border-t border-gray-700 pt-4">
+      <div className="mt-10 border-t border-gray-700 pt-4">
         <p>© 2023 Positivus. All Rights Reserved. <a href="#" className="hover:underline">Privacy Policy</a></p>
       </div>
     </footer>

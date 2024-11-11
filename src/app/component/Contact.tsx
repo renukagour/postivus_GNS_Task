@@ -4,12 +4,12 @@ import contact from "../../../public/contact.png"
 import Image from 'next/image';
 const Contact = () => {
   return (
-    <section className="py-12">
+    <section className="py-12 ">
         
       <h2 className="text-green-600 text-center text-2xl font-bold mb-4">Contact Us</h2>
       <p className="text-center text-gray-600 mb-8">Connect with Us. Let&apos;s Discuss Your Digital Marketing Needs</p>
-      <div className="mt-10 grid grid-cols-2 xs:grid-cols-1 gap-8">
-      <div className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <div className="m-10 p-5 flex justify-between gap-8 bg-gray-200 rounded-lg ">
+      <div className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg ">
         <form className="space-y-4">
           <div className="flex space-x-4">
             <label className="flex items-center">
@@ -27,13 +27,14 @@ const Contact = () => {
           <button type="submit" className="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700">Send Message</button>
         </form>
       </div>
-      <div className='border'>
+      <div>
     
       <Image
                 src={contact}
                 alt="illustration"
-                width={300}
-                height={300}
+                width={250}
+                height={250}
+                className='object-fill'
            
               />
       </div>
