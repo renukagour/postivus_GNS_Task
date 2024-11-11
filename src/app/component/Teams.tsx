@@ -3,43 +3,48 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import jane from '../../../public/jane.png'
+import john from '../../../public/john.png'
+import emily from '../../../public/emily.png'
+import michael from '../../../public/michael.png'
+import sarah from '../../../public/sarah.png'
+import brian from '../../../public/brian.png'
 import Image from "next/image";
 const teamMembers = [
   {
     name: "John Smith",
     title: "CEO and Founder",
     experience: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy.",
-    imagePath: {jane}
+    imagePath: john
   },
   {
     name: "Jane Doe",
     title: "Director of Operations",
     experience: "7+ years of experience in project management and team leadership. Strong organizational skills.",
-    imagePath: {jane},
+    imagePath: jane,
   },
   {
     name: "Michael Brown",
     title: "Senior SEO Specialist",
     experience: "5+ years of experience in SEO and content creation. Proficient in keyword research and optimization.",
-    imagePath:  {jane}
+    imagePath: michael
   },
   {
     name: "Emily Johnson",
     title: "PPC Manager",
     experience: "2+ years of experience in paid search advertising. Skilled in campaign management.",
-    imagePath: {jane},
+    imagePath: emily
   },
   {
     name: "Brian Williams",
     title: "Social Media Specialist",
     experience: "4+ years of experience in social media marketing. Skilled in content creation and engagement.",
-    imagePath:  {jane},
+    imagePath:brian,
   },
   {
     name: "Sarah Kim",
     title: "Content Creator",
     experience: "2+ years of experience in writing and editing. Skilled in SEO-optimized content creation.",
-    imagePath:  {jane},
+    imagePath:sarah,
   },
 ];
 
@@ -60,11 +65,9 @@ const Team: React.FC = () => (
             <div className="text-center">
            
             <Image
-                src={member.imagePath}
+                src={member.imagePath?member.imagePath:""}
                 alt={member.name}
-                width={24}
-                height={24}
-                className="object-cover rounded-full mb-4"
+                className="h-24 w-24 object-cover rounded-full mb-4"
                  />
              
                 <h3 className="text-lg font-semibold">{member.name}</h3>
