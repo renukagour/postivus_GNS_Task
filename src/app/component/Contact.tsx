@@ -27,11 +27,11 @@ const Contact = () => {
           <button type="submit" className="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700">Send Message</button>
         </form>
       </div>
-      <div>
+      <div className='border'>
     
       <Image
                 src={contact}
-                alt="SEO illustration"
+                alt="illustration"
                 width={300}
                 height={300}
            

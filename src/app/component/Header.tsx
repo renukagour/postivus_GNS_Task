@@ -26,7 +26,7 @@ export default function Header() {
                 </clipPath>
               </defs>
             </svg>
-            <h1 className="text-xl font-semibold">Positivus</h1>
+            <h1 className="text-2xl font-semibold">Positivus</h1>
           </div>
           <nav className="">
             <ul className="flex space-x-6  font-medium">
