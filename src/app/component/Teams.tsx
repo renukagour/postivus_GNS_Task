@@ -1,45 +1,45 @@
-// components/Team.tsx
-"use client";
 
+"use client";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
-
+import jane from '../../../public/jane.png'
+import Image from "next/image";
 const teamMembers = [
   {
     name: "John Smith",
     title: "CEO and Founder",
     experience: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy.",
-    imagePath: "/images/john-smith.jpg", // Update with actual image paths
+    imagePath: {jane}
   },
   {
     name: "Jane Doe",
     title: "Director of Operations",
     experience: "7+ years of experience in project management and team leadership. Strong organizational skills.",
-    imagePath: "/images/jane-doe.jpg",
+    imagePath: {jane},
   },
   {
     name: "Michael Brown",
     title: "Senior SEO Specialist",
     experience: "5+ years of experience in SEO and content creation. Proficient in keyword research and optimization.",
-    imagePath: "/images/michael-brown.jpg",
+    imagePath:  {jane}
   },
   {
     name: "Emily Johnson",
     title: "PPC Manager",
     experience: "2+ years of experience in paid search advertising. Skilled in campaign management.",
-    imagePath: "/images/emily-johnson.jpg",
+    imagePath: {jane},
   },
   {
     name: "Brian Williams",
     title: "Social Media Specialist",
     experience: "4+ years of experience in social media marketing. Skilled in content creation and engagement.",
-    imagePath: "/images/brian-williams.jpg",
+    imagePath:  {jane},
   },
   {
     name: "Sarah Kim",
     title: "Content Creator",
     experience: "2+ years of experience in writing and editing. Skilled in SEO-optimized content creation.",
-    imagePath: "/images/sarah-kim.jpg",
+    imagePath:  {jane},
   },
 ];
 
@@ -58,7 +58,14 @@ const Team: React.FC = () => (
 
             <div className="flex flex-col items-center">
             <div className="text-center">
-              <img src={member.imagePath} alt={member.name} className="w-24 h-24 object-cover rounded-full mb-4" />
+           
+            <Image
+                src={member.imagePath}
+                alt={member.name}
+                width={24}
+                height={24}
+                className="object-cover rounded-full mb-4"
+                 />
              
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-sm text-gray-500 font-medium">{member.title}</p>
