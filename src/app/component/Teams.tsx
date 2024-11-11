@@ -57,7 +57,7 @@ const Team: React.FC = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md border border-gray-200 p-4 relative transition-transform hover:scale-105">
-            <div className="absolute top-2 right-2 bg-white rounded-full p-1 text-green-500 shadow">
+            <div className="absolute top-2 right-2 bg-white rounded-full p-1 text-black-500 shadow">
               <FaLinkedin size={18} />
             </div>
 
