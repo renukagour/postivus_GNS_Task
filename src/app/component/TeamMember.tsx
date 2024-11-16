@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import linkedln from '../../../public/linkedln.png'
 interface TeamMemberProps {
   name: string;
   title: string;
   experience: string;
-  imgpath: string;
+  imagePath: StaticImageData;
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({ name, title, experience, imagePath }) => {

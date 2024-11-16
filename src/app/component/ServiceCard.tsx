@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ServiceCardProps {
   title: string;
-  icon: string;
+  icon: StaticImageData;
   bgColor: string;
   textColor: string;
-  buttonIcon: string;
+  buttonIcon: StaticImageData;
 }
 
 export default function ServiceCard({
