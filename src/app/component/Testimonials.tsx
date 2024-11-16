@@ -11,19 +11,19 @@ type Testimonial = {
 const testimonialsData: Testimonial[] = [
   {
     id: 1,
-    quote: "I've been working with Positivus for the past year, and their service has been exceptional...",
+    quote: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
     name: 'John Smith',
     position: 'Marketing Director at XYZ Corp',
   },
   {
     id: 2,
-    quote: "Positivus transformed our digital strategy and provided insights we hadn't considered before.",
+    quote: "Positivus transformed our digital strategy and provided insights we hadn't considered before.We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
     name: 'Jane Doe',
     position: 'CEO at ABC Inc.',
   },
   {
     id: 3,
-    quote: "Their team is knowledgeable, responsive, and truly cares about their clients' success.",
+    quote: "Their team is knowledgeable, responsive, and truly cares about their clients' success. We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
     name: 'Sarah Lee',
     position: 'COO at DEF Ltd.',
   },
@@ -41,9 +41,14 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-12">
-      <h2 className="text-green-400 text-center text-2xl font-bold mb-6">Testimonials</h2>
-      <p className="text-center text-gray-400 mb-12">Hear from Our Satisfied Clients</p>
+   
+     <div className="container mx-auto py-4 px-4">
+        <h2 className="text-2xl font-bold mb-2 heading2 w-36">Testimonials</h2>
+        <p className="text-gray-500 mb-6">
+        Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+        </p>
+     <section className=" container bg-gray-900 text-white py-12">
+      
       <div className="relative max-w-3xl mx-auto overflow-hidden">
         <div className="flex space-x-8 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${current * 100}%)` }}>
           {testimonialsData.map((testimonial) => (
@@ -66,6 +71,8 @@ const Testimonials: React.FC = () => {
         </div>
       </div>
     </section>
+    </div>
+   
   );
 };
 

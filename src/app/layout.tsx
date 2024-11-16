@@ -2,15 +2,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/app/component/Header";
-import Services from "@/app/component/Services";
-import Home from "@/app/component/Home";
-import Testimonials from "@/app/component/Testimonials";
-import Contact from "@/app/component/Contact";
-import CaseStudies from "./component/CaseStudies";
-import WorkingProcess from "./component/WorkingProcess";
-import Teams from "./component/Teams";
-import Footer from "./component/Footer";
+import { HomePage } from "./component/HomePage";
+
 
 
 const geistSans = localFont({
@@ -39,20 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* header */}
-    <Header/>
-    {/* main content */}
-    <main>
-    <Home />
-        <Services />
-        <CaseStudies/>
-        <WorkingProcess/>
-        <Teams/>
-        <Testimonials />
-        <Contact />
-    </main>
-    {/* footer */}
-    <Footer/>
+    <HomePage/>
         {children}
       </body>
     </html>

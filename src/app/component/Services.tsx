@@ -1,12 +1,66 @@
 import Image from "next/image";
 import illustration from "../../../public/Illustration.png";
+import '../style.css'
+import arrow from '../../../public/arrow.png'
+import arrowWhite from '../../../public/arrow-white.png'
+import ServiceCard from "./ServiceCard";
+import s1 from '../../../public/s1.png'
+import s2 from '../../../public/s2.png'
+import s3 from '../../../public/s3.png'
+import s4 from '../../../public/s4.png'
+import s5 from '../../../public/s5.png'
+import s6 from '../../../public/s6.png'
+const services = [
+  {
+    title: "Search engine optimization",
+    icon: s1 ,
+    bgColor: "bg-zinc-100",
+    textColor: "text-black",
+    buttonIcon:  arrow ,
+  },
+  {
+    title: "Pay-per-click advertising",
+    icon: s2 ,
+    bgColor: "bg-lime-300",
+    textColor: "text-black",
+    buttonIcon: arrow ,
+  },
+  {
+    title: "Social Media Marketing",
+    icon:  s3 ,
+    bgColor: "bg-zinc-900",
+    textColor: "text-white",
+    buttonIcon:  arrowWhite ,
+  },
+  {
+    title: "Email Marketing",
+    icon: s4 ,
+    bgColor: "bg-zinc-100",
+    textColor: "text-black",
+    buttonIcon:  arrow ,
+  },
+  {
+    title: "Content Creation",
+    icon: s5 ,
+    bgColor: "bg-lime-300",
+    textColor: "text-black",
+    buttonIcon: arrow ,
+  },
+  {
+    title: "Analytics and Tracking",
+    icon:  s6 ,
+    bgColor: "bg-zinc-900",
+    textColor: "text-white",
+    buttonIcon:  arrowWhite ,
+  },
+];
 export default function Services() {
   return (
     <section className="py-20">
       <div className="container mx-auto">
         <div className="flex text-center">
-          <h2 className="text-2xl font-bold ">Services</h2>
-          <p className="text-sm mt-3 ml-2">
+          <h2 className="text-3xl font-bold heading2">Services</h2>
+          <p className="text-xs mt-3 ml-5 w-[400px] text-left">
             {" "}
             At our digital marketing agency, we offer a range of services to
             help businesses grow and succeed online. These services include:
@@ -14,229 +68,16 @@ export default function Services() {
         </div>
         <div className="mt-10 grid grid-cols-2 xs:grid-cols-1 gap-8">
 
-          <div className="bg-white p-6 rounded-3xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* left side */}
-            <div>
-            <h3 className="text-xl font-semibold">SEO Optimization</h3>
-            <p className="mt-2">
-              Improve your website visibility on search engines.
-            </p>
-            <a href="#" className="flex items-center font-medium gap-2 mt-8">
-            <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
-                  <path
-                    d="M11.2501 24.701C10.5326 25.1152 10.2868 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.7501 27.299L11.2501 24.701ZM30.7695 16.3882C30.9839 15.588 30.509 14.7655 29.7088 14.5511L16.6688 11.0571C15.8686 10.8426 15.0461 11.3175 14.8317 12.1177C14.6173 12.9179 15.0921 13.7404 15.8923 13.9548L27.4835 17.0607L24.3776 28.6518C24.1632 29.452 24.6381 30.2745 25.4383 30.4889C26.2385 30.7033 27.061 30.2284 27.2754 29.4282L30.7695 16.3882ZM12.7501 27.299L30.0706 17.299L28.5706 14.701L11.2501 24.701L12.7501 27.299Z"
-                    fill="#B9FF66"
-                  />
-                </svg>
-                <span>Learn more</span>
-                </a>
-            </div>
-            {/* right side */}
-            <div className="flex justify-center">
-              <Image
-                src={illustration}
-                alt="SEO illustration"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-3xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* left side */}
-            <div>
-            <h3 className="text-xl font-semibold">SEO Optimization</h3>
-            <p className="mt-2">
-              Improve your website visibility on search engines.
-            </p>
-            <a href="#" className="flex items-center font-medium gap-2 mt-8">
-            <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
-                  <path
-                    d="M11.2501 24.701C10.5326 25.1152 10.2868 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.7501 27.299L11.2501 24.701ZM30.7695 16.3882C30.9839 15.588 30.509 14.7655 29.7088 14.5511L16.6688 11.0571C15.8686 10.8426 15.0461 11.3175 14.8317 12.1177C14.6173 12.9179 15.0921 13.7404 15.8923 13.9548L27.4835 17.0607L24.3776 28.6518C24.1632 29.452 24.6381 30.2745 25.4383 30.4889C26.2385 30.7033 27.061 30.2284 27.2754 29.4282L30.7695 16.3882ZM12.7501 27.299L30.0706 17.299L28.5706 14.701L11.2501 24.701L12.7501 27.299Z"
-                    fill="#B9FF66"
-                  />
-                </svg>
-                <span>Learn more</span>
-                </a>
-            </div>
-            {/* right side */}
-            <div className="flex justify-center">
-              <Image
-                src={illustration}
-                alt="SEO illustration"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            </div>
-          </div>
-          <div className="bg-white p-6 rounded-3xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* left side */}
-            <div>
-            <h3 className="text-xl font-semibold">SEO Optimization</h3>
-            <p className="mt-2">
-              Improve your website visibility on search engines.
-            </p>
-            <a href="#" className="flex items-center font-medium gap-2 mt-8">
-            <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
-                  <path
-                    d="M11.2501 24.701C10.5326 25.1152 10.2868 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.7501 27.299L11.2501 24.701ZM30.7695 16.3882C30.9839 15.588 30.509 14.7655 29.7088 14.5511L16.6688 11.0571C15.8686 10.8426 15.0461 11.3175 14.8317 12.1177C14.6173 12.9179 15.0921 13.7404 15.8923 13.9548L27.4835 17.0607L24.3776 28.6518C24.1632 29.452 24.6381 30.2745 25.4383 30.4889C26.2385 30.7033 27.061 30.2284 27.2754 29.4282L30.7695 16.3882ZM12.7501 27.299L30.0706 17.299L28.5706 14.701L11.2501 24.701L12.7501 27.299Z"
-                    fill="#B9FF66"
-                  />
-                </svg>
-                <span>Learn more</span>
-                </a>
-            </div>
-            {/* right side */}
-            <div className="flex justify-center">
-              <Image
-                src={illustration}
-                alt="SEO illustration"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            </div>
-          </div>
-          <div className="bg-white p-6 rounded-3xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* left side */}
-            <div>
-            <h3 className="text-xl font-semibold">SEO Optimization</h3>
-            <p className="mt-2">
-              Improve your website visibility on search engines.
-            </p>
-            <a href="#" className="flex items-center font-medium gap-2 mt-8">
-            <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
-                  <path
-                    d="M11.2501 24.701C10.5326 25.1152 10.2868 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.7501 27.299L11.2501 24.701ZM30.7695 16.3882C30.9839 15.588 30.509 14.7655 29.7088 14.5511L16.6688 11.0571C15.8686 10.8426 15.0461 11.3175 14.8317 12.1177C14.6173 12.9179 15.0921 13.7404 15.8923 13.9548L27.4835 17.0607L24.3776 28.6518C24.1632 29.452 24.6381 30.2745 25.4383 30.4889C26.2385 30.7033 27.061 30.2284 27.2754 29.4282L30.7695 16.3882ZM12.7501 27.299L30.0706 17.299L28.5706 14.701L11.2501 24.701L12.7501 27.299Z"
-                    fill="#B9FF66"
-                  />
-                </svg>
-                <span>Learn more</span>
-                </a>
-            </div>
-            {/* right side */}
-            <div className="flex justify-center">
-              <Image
-                src={illustration}
-                alt="SEO illustration"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            </div>
-          </div>
-          <div className="bg-white p-6 rounded-3xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* left side */}
-            <div>
-            <h3 className="text-xl font-semibold">SEO Optimization</h3>
-            <p className="mt-2">
-              Improve your website visibility on search engines.
-            </p>
-            <a href="#" className="flex items-center font-medium gap-2 mt-8">
-            <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
-                  <path
-                    d="M11.2501 24.701C10.5326 25.1152 10.2868 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.7501 27.299L11.2501 24.701ZM30.7695 16.3882C30.9839 15.588 30.509 14.7655 29.7088 14.5511L16.6688 11.0571C15.8686 10.8426 15.0461 11.3175 14.8317 12.1177C14.6173 12.9179 15.0921 13.7404 15.8923 13.9548L27.4835 17.0607L24.3776 28.6518C24.1632 29.452 24.6381 30.2745 25.4383 30.4889C26.2385 30.7033 27.061 30.2284 27.2754 29.4282L30.7695 16.3882ZM12.7501 27.299L30.0706 17.299L28.5706 14.701L11.2501 24.701L12.7501 27.299Z"
-                    fill="#B9FF66"
-                  />
-                </svg>
-                <span>Learn more</span>
-                </a>
-            </div>
-            {/* right side */}
-            <div className="flex justify-center">
-              <Image
-                src={illustration}
-                alt="SEO illustration"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            </div>
-          </div>
-          <div className="bg-white p-6 rounded-3xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* left side */}
-            <div>
-            <h3 className="text-xl font-semibold">SEO Optimization</h3>
-            <p className="mt-2">
-              Improve your website visibility on search engines.
-            </p>
-            <a href="#" className="flex items-center font-medium gap-2 mt-8">
-            <svg
-                  width="35"
-                  height="35"
-                  viewBox="0 0 41 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
-                  <path
-                    d="M11.2501 24.701C10.5326 25.1152 10.2868 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.7501 27.299L11.2501 24.701ZM30.7695 16.3882C30.9839 15.588 30.509 14.7655 29.7088 14.5511L16.6688 11.0571C15.8686 10.8426 15.0461 11.3175 14.8317 12.1177C14.6173 12.9179 15.0921 13.7404 15.8923 13.9548L27.4835 17.0607L24.3776 28.6518C24.1632 29.452 24.6381 30.2745 25.4383 30.4889C26.2385 30.7033 27.061 30.2284 27.2754 29.4282L30.7695 16.3882ZM12.7501 27.299L30.0706 17.299L28.5706 14.701L11.2501 24.701L12.7501 27.299Z"
-                    fill="#B9FF66"
-                  />
-                </svg>
-                <span>Learn more</span>
-                </a>
-            </div>
-            {/* right side */}
-            <div className="flex justify-center">
-              <Image
-                src={illustration}
-                alt="SEO illustration"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
-            </div>
-          </div>
+        {services.map((service, index) => (
+        <ServiceCard
+          key={index}
+          title={service.title}
+          icon={service.icon}
+          bgColor={service.bgColor}
+          textColor={service.textColor}
+          buttonIcon={service.buttonIcon}
+        />
+      ))}
         </div>
 
         <div className="mt-10 p-8 rounded-3xl shadow-md bg-gray-50">
